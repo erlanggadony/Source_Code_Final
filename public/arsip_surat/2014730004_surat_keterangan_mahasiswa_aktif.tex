@@ -1,0 +1,44 @@
+\documentclass[12pt]{letter}
+%\usepackage[legalpaper, top=55mm,bottom=15mm,left=35mm,right=18mm]{geometry}
+\usepackage{mailmerge}
+
+\begin{document}
+
+\mailfields{noSurat,nama,NPM,prodi,kota_lahir,tglLahir,alamat,semester,tanggal}
+
+\mailrepeat{
+
+	\begin{center}
+	\underline{SURAT KETERANGAN}\\
+	{\footnotesize \field{noSurat}}
+	\end{center}
+	\vspace{0.75cm}
+	Fakultas teknologi Informasi dan Sains Universitas Katolik Parahyangan Bandung, menerangkan :
+
+
+		\begin{quote}
+			Nama \hspace{2.4cm}: \field{nama}\\
+			NPM \hspace{2.5cm}: \field{NPM}\\
+			Program Studi \hspace{0.8cm}: \field{prodi}\\
+			Tempat/Tgl. Lahir : \field{kota_lahir}, \field{tglLahir}\\
+			Alamat Bandung \hspace{0.4cm}: \field{alamat}\\
+		\end{quote}
+
+		terdaftar sebagai mahasiswa Fakultas teknologi Informasi dan Sains pada \textbf{semester \field{semester}} .\\
+	Demikian surat keterangan ini dibuat agar dapat dipergunakan sebagaimana mestinya.\\
+	\\
+
+
+		\begin{flushright}
+			Bandung, \field{tanggal}\\
+					Wakil Dekan I\\
+			\vspace{2cm}
+			\underline{Dr.rer.nat. Cecilia Esti Nugraheni}
+		\end{flushright}
+
+	\thispagestyle{empty}
+		\newpage
+
+}
+\mailentry{FTIS/X/2017/4,MUHAMMAD ADRIAN PUTRA ZUBIR,2014730004,Teknik Informatika,Bandung,29 December 1995,JALAN DAGO no 176,Genap,1 June 2017}
+\end{document}

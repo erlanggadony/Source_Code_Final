@@ -1,0 +1,47 @@
+\documentclass[12pt]{letter}
+\usepackage[legalpaper, top=55mm,bottom=7mm,left=35mm,right=18mm]{geometry}
+\usepackage{mailmerge}
+
+\begin{document}
+
+\mailfields{nama,tanggalLahir,wargaNegara,tahunKe,thnAkademik,negaraTujuan,tanggalKunjungan,organisasiTujuan,tanggal}
+
+\mailrepeat{
+\begin{flushright}
+	Bandung, \field{tanggal}
+\end{flushright}
+	To:\\
+	\field{organisasiTujuan}\\
+	\textbf{VISA SECTION}\\
+	Jakarta - Indonesia\\
+
+	Re : APPLICATION FOR VISA SCHENGEN\\
+
+	This is to acknowledge that\
+
+		Name\hspace{2cm}: \field{nama}\\
+		Date of Birth\hspace{0.6cm}: \field{tanggalLahir}\\
+		Nationality\hspace{1cm}: \field{wargaNegara}\
+
+	He is a student at Parahyangan Catholic University, Jl. Ciumbuleuit No. 94 Bandung, in Year \field{tahunKe} for the school year \field{thnAkademik}.\
+
+	This letter is written to support his intention to visit \field{negaraTujuan} on \field{tanggalKunjungan}.
+
+	\field{nama} will be back to school to continue his study after the holiday.\
+
+	We hope that visa can be granted for this  purpose.\
+
+	\vspace{2cm}
+			Kind regards\\
+			\vspace{1.5cm}
+
+
+			\underline{Flaviana Catherine, S.Si, M.T}\\
+			Vice Dean of Student Affairs
+
+	\thispagestyle{empty}
+		\newpage
+
+}
+
+\end{document}

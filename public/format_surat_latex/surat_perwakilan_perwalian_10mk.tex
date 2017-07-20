@@ -1,0 +1,72 @@
+\documentclass[12pt]{letter}
+\usepackage[legalpaper, top=25mm,bottom=15mm,left=35mm,right=18mm]{geometry}
+\usepackage{mailmerge}
+
+\begin{document}
+
+\mailfields{semester,thnAkademik,namaPemohon,prodiPemohon,npmPemohon,namaWakil,prodiWakil,npmWakil,dosenWali,alasan,kodeMK1,namaMK1,sks1,kodeMK2,namaMK2,sks2,kodeMK3,namaMK3,sks3,kodeMK4,namaMK4,sks4,kodeMK5,namaMK5,sks5,kodeMK6,namaMK6,sks6,kodeMK7,namaMK7,sks7,kodeMK8,namaMK8,sks8,kodeMK9,namaMK9,sks9,kodeMK10,namaMK10,sks10,tanggal}
+
+\mailrepeat{
+
+	\begin{center}
+	{\Large \textbf{FORMULIR\\
+	PERWALIAN YANG DIWAKILKAN}}
+	\end{center}
+	\vspace{0.25cm}
+	Semester \hspace{1.5cm}: \field{semester} \\
+	Tahun Akademik : \field{thnAkademik}\\
+
+	{\footnotesize \textbf{IDENTITAS MAHASISWA YANG PERWALIANNYA DIWAKILKAN}}\\
+	Nama \hspace{2.4cm}: \field{namaPemohon} \\
+	Program Studi \hspace{0.8cm}: \field{prodiPemohon}\\
+	NPM \hspace{2.5cm}: \field{npmPemohon}	\\
+	{\footnotesize \textbf{IDENTITAS MAHASISWA YANG DIBERI KUASA PERWALIAN}}\\
+	Nama \hspace{2.4cm}: \field{namaWakil} \\
+	Program Studi \hspace{0.8cm}: \field{prodiWakil}\\
+	NPM \hspace{2.5cm}: \field{npmWakil}\\
+
+	Alasan tidak bisa hadir pada saat perwalian :\\
+	\field{alasan}\\
+	Mata kuliah yang diambil saat FRS : \\
+	\begin{tabular}{|c|l|l|l|}
+		\hline
+		\textbf{No.}&\textbf{Kode MK}&\textbf{Nama Mata Kuliah}&\textbf{Sks}\\ \hline
+		1&\field{kodeMK1}&\field{namaMK1}&\field{sks1}\\ \hline
+		2&\field{kodeMK2}&\field{namaMK2}&\field{sks2}\\ \hline
+		3&\field{kodeMK3}&\field{namaMK3}&\field{sks3}\\ \hline
+		4&\field{kodeMK4}&\field{namaMK4}&\field{sks4}\\ \hline
+		5&\field{kodeMK5}&\field{namaMK5}&\field{sks5}\\ \hline
+		6&\field{kodeMK6}&\field{namaMK6}&\field{sks6}\\ \hline
+		7&\field{kodeMK7}&\field{namaMK7}&\field{sks7}\\ \hline
+		8&\field{kodeMK8}&\field{namaMK8}&\field{sks8}\\ \hline
+		9&\field{kodeMK9}&\field{namaMK9}&\field{sks9}\\ \hline
+		10&\field{kodeMK10}&\field{namaMK10}&\field{sks10}\\ \hline
+	\end{tabular}
+
+\textbf{\underline{LAMPIRAN}} :
+\begin{enumerate}
+	\item Fotokopi KTM mahasiswa yag menerima kuasa
+\end{enumerate}
+
+		\begin{flushright}
+			Bandung, \field{tanggal}
+		\end{flushright}
+Tanda Tangan \hspace{7.3cm}Tanda Tangan \\
+Mahasiswa yang memberi kuasa \hspace{4cm} Mahasiswa yang menerima kuasa \\
+\begin{flushright}
+		\end{flushright}
+			\vspace{1cm}
+
+	(\field{namaPemohon})\hspace{4.6cm} (\field{namaWakil})\\
+
+	\textbf{Mengetahui dosen wali, \hspace{4.8cm} Menyetujui Wakil Dekan I}
+	\vspace{2cm}
+
+	(\field{dosenWali})\hspace{4.8cm}(Dr.rer.nat. Cecilia Esti Nugraheni)
+	\thispagestyle{empty}
+		\newpage
+
+}
+
+
+\end{document}

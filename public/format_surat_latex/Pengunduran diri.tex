@@ -1,0 +1,62 @@
+\documentclass[12pt]{letter}
+\usepackage[legalpaper, top=55mm,bottom=7mm,left=35mm,right=18mm]{geometry}
+\usepackage{ifthen,mailmerge}
+\usepackage{changepage}
+
+\begin{document}
+% \ifequal{A}{B}{what if A=B}{what if A<>B}
+%\newcommand{\ifequal}[2]{\ifthenelse{\equal{#1}{#2}}}
+
+\mailfields{noSurat,nama,NPM,prodi,tanggal,semester,tanggal,dekan}
+
+\mailrepeat{
+
+	
+	
+	Nomor : \field{noSurat}\\
+	Hal\hspace{0.75cm}: Pengunduran diri\\
+	Lamp\hspace*{0.35cm}: Surat pengunduran diri ybs.\\
+	\vspace{0.5cm}
+	
+	Kepada : Yang terhormat\\
+	\hspace*{1.7cm} Rektor\\
+	\hspace*{1.7cm} Universitas Katolik Parahyangan\\
+	\hspace*{1.7cm} Di tempat\\
+	\vspace{0.5cm}
+	
+	\hspace*{1.8cm}Berdasarkan surat pengunduran diri :
+
+		\begin{adjustwidth}{2.5cm}{0pt}
+			\textbf{\field{nama}\\
+			NPM  \field{NPM}\\
+			Program Studi \field{prodi}}\\
+		\end{adjustwidth}
+		
+		\begin{adjustwidth}{1.8cm}{0pt}
+		tanggal \field{tanggal}, dengan ini kami nyatakan bahwa mahasiswa tersebut telah mengundurkan diri atas permintaan sendiri dari program studi FTIS terhitung mulai \textbf{\textit{semester \field{semester}}}.
+		\end{adjustwidth}
+		\vspace{2cm}
+		\begin{flushright}
+			Bandung, \field{tanggal}\\ 
+					Dekan\\
+			\vspace{2cm}
+			\underline{\field{dekan}}
+		\end{flushright}
+		\vspace{5cm}
+		{\scriptsize {Tembusan :
+		\begin{enumerate}
+			\item WR-I, WR-II
+			\item KBAA, KBTI
+			\item Kajur \field{prodi}, Dosen Wali
+			\item Map Ybs
+			\item Arsip
+		\end{enumerate}}}
+
+	\thispagestyle{empty}
+		\newpage
+
+}
+ 
+\mailentry{noSurat,nama,NPM,prodi,tanggal,semester,tanggal,dekan}
+
+\end{document}

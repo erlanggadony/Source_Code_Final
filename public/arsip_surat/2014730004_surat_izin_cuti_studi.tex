@@ -1,0 +1,58 @@
+\documentclass[12pt]{letter}
+\usepackage[legalpaper, top=55mm,bottom=7mm,left=35mm,right=18mm]{geometry}
+\usepackage{mailmerge}
+\usepackage{changepage} %package utk atur margin
+
+\begin{document}
+
+\mailfields{noSurat,nama,NPM,tanggal,semester,thnAkademik,prodi,nextSemester,nextThnAkademik}
+
+\mailrepeat{
+
+	
+	
+	Nomor : \field{noSurat}\\
+	Hal\hspace{0.75cm}: Surat Ijin Berhenti Studi Sementara\\
+	Lamp\hspace*{0.35cm}: Surat Permohonan\\
+	\vspace{0.5cm}
+	
+	Kepada : Yang terhormat\\
+	\hspace*{1.7cm} \field{nama}\\
+	\hspace*{1.7cm} NPM \field{NPM}\\
+	\hspace*{1.7cm} di tempat\\
+	\vspace{0.5cm}
+	
+	\begin{adjustwidth}{1.8cm}{0pt}Menurut surat permohonan cuti studi Anda tertanggal \field{tanggal}, dengan ini diberitahukan bahwa Anda diijinkan cuti studi untuk:
+\end{adjustwidth}
+		\begin{adjustwidth}{3cm}{0pt}
+			\textbf{Semester \field{semester} tahun akademik \field{thnAkademik}}
+		\end{adjustwidth}
+		
+		\begin{adjustwidth}{1.8cm}{0pt}
+		Selanjutnya, untuk dapat mengikuti kegiatan akademik kembali, Anda wajib melakukan registrasi pada Masa Perwalian dan \textbf{FRS semester \field{nextSemester} tahun akademik \field{nextThnAkademik}} sesuai kalender akademik dan melaksanakan ketentuan yang telah ditetapkan.\\
+		
+		Demikian harap Anda maklum.
+		\end{adjustwidth}
+	\vspace{2cm}	
+		\begin{flushright}
+			Bandung,\field{tanggal}\\ 
+					Dekan\\
+			\vspace{2cm}
+			\underline{Dr. Ferry Jaya Permana, Drs., M.Si., ASAI}
+		\end{flushright}
+		\vspace{5cm}
+		\scriptsize {Tembusan :
+		\begin{enumerate}
+			\item WR-I, WR-II
+			\item KBAA, KBTI
+			\item Kajur \field{prodi}, Dosen Wali
+			\item Mhs Ybs
+			\item Arsip
+		\end{enumerate}}
+
+	\thispagestyle{empty}
+		\newpage
+
+}
+\mailentry{FTIS/X/2017/3,MUHAMMAD ADRIAN PUTRA ZUBIR,2014730004,1 June 2017,Genap,2016/2017,Teknik Informatika,Ganjil,2017/2018}
+\end{document}

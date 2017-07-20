@@ -1,0 +1,45 @@
+\documentclass[12pt]{letter}
+\usepackage[legalpaper, top=53mm,bottom=15mm,left=35mm,right=18mm]{geometry}
+\usepackage{mailmerge}
+
+\begin{document}
+
+\mailfields{noSurat,nama,prodi,npm,semester,thnAkademik,penyediabeasiswa,tanggal}
+
+\mailrepeat{
+
+	\begin{center}
+	\underline{SURAT KETERANGAN}\\
+	{\footnotesize  \field{noSurat}}
+	\end{center}
+	\vspace{0.75cm}
+	Bersama ini kami menerangkan bahwa mahasiswa Fakultas teknologi Informasi dan Sains (FTIS) berikut : \
+	\begin{quote}
+		Nama\hspace{2cm}: \field{nama}\
+
+		Jurusan\hspace{1.6cm}: \field{prodi}\
+
+		NPM\hspace{2.1cm}: \field{npm}\
+	\end{quote}
+	BENAR tidak menerima beasiswa dari Universitas Katolik Parahyangan pada Semester \field{semester} Tahun Akademik \field{thnAkademik}.\
+
+	Surat keterangan ini dibuat sebagai kelengkapan bagi ybs. untuk mengajukan diri sebagai penerima beasiswa perusahaan \field{penyediabeasiswa}.
+		\vspace{0.5cm}
+		\begin{flushright}
+			Bandung, \field{tanggal}
+
+			\vspace{2cm}
+
+
+
+
+		\underline{Flaviana Catherine, S.Si, M.T}\\
+		WD III FTIS - UNPAR
+		\end{flushright}
+
+		\thispagestyle{empty}
+			\newpage
+
+}
+
+\end{document}

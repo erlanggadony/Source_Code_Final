@@ -1,0 +1,245 @@
+body{
+  background-color:#3f4863;
+}
+
+a, h2, h3{
+    font-family:arial, verdana, courier;
+}
+
+th, .ctr{
+  text-align:center;
+}
+
+#banner{
+    width: 550px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+  /*background-color: #474545;*/
+}
+
+#btnAddTextField{
+    margin-left: 40px;
+}
+
+.offset{
+  margin-left: 225px;
+}
+
+.navigation{
+  margin-top: 10px;
+  background-color: #3a3939;
+  height: 41px;
+  /*padding-top: -5px;*/
+}
+
+
+.profile, .content, .contentPreview {
+  float: left;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content{
+  width: 850px;
+  margin-left: 50px;
+  margin-right: 5px;
+  height: 1429px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top:20px;
+}
+
+.contentPreview{
+  width: 850px;
+  margin-left: 50px;
+  margin-right: 5px;
+  height: 1500px;
+  padding-left:90px;
+  padding-right:90px;
+  padding-top:90px;
+  text-align: justify;
+}
+
+.profile{
+  height: 300px;
+  width: 200px;
+  margin-right: 50px;
+  margin-left: 5px;
+}
+
+h2, h3, h4{
+    text-align: center;
+}
+
+#profpict{
+  /*padding-left: 100px;*/
+  margin-top: 20px;
+}
+
+.search{
+  padding-right: 5px;
+}
+
+.footer{
+  width: 100%;
+  background-color: #3a3939;
+  height: 70px;
+}
+
+.date{
+  width: 200px;
+}
+
+.inline{
+   list-style: none;
+}
+
+.inline a{
+   text-decoration: none;
+   color: white;
+}
+
+.inline li{
+   display: inline-block;
+   padding: 10px;
+   background-color: #3a3939;
+   height: 40px;
+}
+
+.inline li:hover{
+   background-color: green;
+   color: white;
+}
+
+.text-center{
+   text-align: center;
+   font-weight: bold;
+}
+
+
+.prev{
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /*float: left;*/
+}
+
+.prevLabel{
+  font-weight: normal;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes slideIn {
+    from {bottom: 150; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: 150; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 255);
+}
+
+.card.hovercard .cardheader {
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .avatar {
+    position: relative;
+    top: -120px;
+    margin-bottom: -120px;
+}
+
+.card.hovercard .avatar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    border: 5px solid rgba(255,255,255,0.5);
+}
+
+.card.hovercard .info {
+    padding: 4px 8px 10px;
+}
+
+.card.hovercard .info .title {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 1;
+    color: #262626;
+    vertical-align: middle;
+}
+
+.card.hovercard .info .desc {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+
+.card.hovercard .bottom {
+    padding: 0 20px;
+    margin-bottom: 17px;
