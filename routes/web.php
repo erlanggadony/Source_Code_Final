@@ -37,7 +37,7 @@ Route::post('/home', 'AuthController@authenticate');
     //halaman untuk menampilkan preview surat
     Route::post('/preview', 'PesanansuratController@tampilkanPreview');
     Route::post('/kirimFormulir', 'PesanansuratController@store');
-    Route::get('/proses_surat', 'PesanansuratController@proses');
+    
 //<-------------------------------------------------------PETUGAS TU------------------------------------------------------>
     // halaman utama pejabat
     Route::get('/home_TU', 'PesanansuratController@tampilkanPesananSurat');

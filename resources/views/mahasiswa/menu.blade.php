@@ -3,7 +3,6 @@
         <ul class="inline">
            <a href="/home_mahasiswa"><li>Home</li></a>
            <a href="/pilih_kategori_surat"><li>Buat Surat</li></a>
-           <a href="/proses_surat"><li>Proses Surat</li></a>
            <a href="{{ url('/logout') }}"
                onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();"><li>

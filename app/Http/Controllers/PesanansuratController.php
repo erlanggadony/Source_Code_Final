@@ -102,18 +102,6 @@ class PesanansuratController extends Controller
       ]);    
     }
 
-    public function proses(Request $request){
-      $loggedInUser = Auth::user();
-      $realUser = $this->getRealUser($loggedInUser);
-      
-      $results = $realUser->pesanansurats;
-      
-      return view('mahasiswa.proses_surat', [
-        'pesanansurats' => $results,
-        'user' => $realUser
-      ]);
-    }
-
     public function downloadLampiran(Request $request){
       $reqLink = $request->link;
       $getLink = explode("/", $reqLink);
